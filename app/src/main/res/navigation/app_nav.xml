@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_nav"
+    app:startDestination="@id/splashScreen">
+
+    <fragment
+        android:id="@+id/splashScreen"
+        android:name="uz.gita.mirzabek.example.eventapp.presenter.screens.SplashScreen"
+        android:label="SplashScreen"
+        tools:layout="@layout/screen_splash"
+        >
+        <action
+            android:id="@+id/action_splashScreen_to_eventScreen"
+            app:destination="@id/eventScreen"
+
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/eventScreen"
+        android:name="uz.gita.mirzabek.example.eventapp.presenter.screens.EventScreen"
+        android:label="EventScreen"
+        tools:layout="@layout/event_screen"
+        >
+        <action
+            android:id="@+id/action_eventScreen_to_infoScreen"
+            app:destination="@id/infoScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/infoScreen"
+        android:name="uz.gita.mirzabek.example.eventapp.presenter.screens.InfoScreen"
+        android:label="InfoScreen"
+        tools:layout="@layout/screen_info"
+
+        />
+</navigation>
